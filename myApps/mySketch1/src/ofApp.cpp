@@ -1,19 +1,29 @@
 #include "ofApp.h"
+int myCircleX;
+int myCircleY;
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-
+    ofSetFrameRate(60);
+    myCircleX=300;
+    myCircleY=200;
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
-
+    myCircleX+=4;
+    if (myCircleX > 1024)
+    {
+        myCircleX = 300;
+    }
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+
     ofSetColor(255, 0, 255);
-    ofCircle(200, 300, 60);
+    ofCircle(myCircleX, myCircleY, 60);
+    ofDrawBitmapString(ofToString(ofGetFrameRate())+"fps", 10, 15);
 }
 
 //--------------------------------------------------------------
