@@ -9,7 +9,7 @@ public:
         Ball();
 
         // Methods
-        void moveTo();
+        void moveTo(int _xDestiny, int _yDestiny);
         void draw();
 
         // Properties

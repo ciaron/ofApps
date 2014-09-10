@@ -11,8 +11,9 @@ Ball::Ball(){
     y = ofRandom( ofGetWindowHeight() );
 }
 
-void Ball::moveTo(){
-
+void Ball::moveTo(int _xDestiny, int _yDestiny){
+    x += ( _xDestiny - x ) * 0.1;
+    y += ( _yDestiny - y ) * 0.1;
 }
 
 void Ball::draw(){

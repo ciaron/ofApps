@@ -18,8 +18,9 @@ void ofApp::update(){
     {
         myCircleX = 300;
     }*/
-    theBall.x += ( mouseX - theBall.x ) * 0.1;
-    theBall.y += ( mouseY - theBall.y ) * 0.1;
+    //theBall.x += ( mouseX - theBall.x ) * 0.1;
+    //theBall.y += ( mouseY - theBall.y ) * 0.1;
+    theBall.moveTo(mouseX,mouseY);
 }
 
 //--------------------------------------------------------------
